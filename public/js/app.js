@@ -12,9 +12,9 @@ weatherButton.addEventListener('submit',(e)=>{
     fetch('/weather?address='+location_inpu.value).then((res) => {
         res.json().then((data) =>{
          if(data.error){
-
+             console.log(data.error);
              document.querySelector('#msg-1').innerHTML=data.error;
-             document.querySelector('#msg-1').innerHTML="";
+             document.querySelector('#msg-2').innerHTML="";
          }else{
             console.log(data.address);
             console.log(data.summary[0]);

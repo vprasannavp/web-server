@@ -8,7 +8,6 @@ const port = process.env.PORT || 3000
 
 
 const hbs = require('hbs');
-const app = express();
 const pubDir = path.join(__dirname,"./public");
 const templateDir = path.join(__dirname,"./templates/views");
 const partialsDir = path.join(__dirname,"./templates/partials");
