@@ -18,10 +18,13 @@ const forecast = (lat,long,calback) =>{
             calback("No data" , undefined)
         }
         else{
+console.log(body.current.wind_speed);
+
             calback(undefined, {
                      temp:body.current.temperature,
              precip : body.current.precip,
-            summary : body.current.weather_descriptions
+            summary : body.current.weather_descriptions,
+            wind : body.current.wind_speed
             })
         
     

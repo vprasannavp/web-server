@@ -68,7 +68,7 @@ app.get('/product',(req,res)=>{
                  return res.send({error})
                 }
             
-                forecast(lat, long, (error, {temp, precip : newprecip,summary}) => {
+                forecast(lat, long, (error, {temp, precip : newprecip,summary,wind}) => {
                   if(error){
                     return res.send({error})
                    }
@@ -77,7 +77,8 @@ app.get('/product',(req,res)=>{
                         address:place,
                         temp,
                         newprecip,
-                        summary
+                        summary,
+                        wind
                     })
                   })
               

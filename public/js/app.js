@@ -14,12 +14,14 @@ weatherButton.addEventListener('submit',(e)=>{
          if(data.error){
              console.log(data.error);
              document.querySelector('#msg-1').innerHTML=data.error;
-             document.querySelector('#msg-2').innerHTML="";
+             document.querySelector('#msg-2s').innerHTML="";
          }else{
             console.log(data.address);
             console.log(data.summary[0]);
             document.querySelector('#msg-1').innerHTML="Address : "+data.address;
             document.querySelector('#msg-2').innerHTML="Summary : "+data.summary[0];
+            document.querySelector('#msg-3').innerHTML="Wind Speed : "+data.wind;
+            
          }
          
         } )
