@@ -9,7 +9,7 @@ weatherButton.addEventListener('submit',(e)=>{
     console.log("hey i was clicked");
     console.log(location_inpu.value);
     document.querySelector('#msg-1').innerHTML="Loading ....";
-    fetch('http://localhost:3000/weather?address='+location_inpu.value).then((res) => {
+    fetch('/weather?address='+location_inpu.value).then((res) => {
         res.json().then((data) =>{
          if(data.error){
 

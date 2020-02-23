@@ -2,6 +2,11 @@ const path = require('path');
 const express = require('express');
 const geocode = require('./src/geocode');
 const forecast = require('./src/forecast');
+
+const app = express()
+const port = process.env.PORT || 3000
+
+
 const hbs = require('hbs');
 const app = express();
 const pubDir = path.join(__dirname,"./public");
@@ -96,6 +101,6 @@ app.get('*',(req,res) => {
 
 
 
-app.listen('3000' , () =>{
+app.listen(port , () =>{
     console.log("Test Server");
 })
